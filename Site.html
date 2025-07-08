@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PowerBI – José Freitas</title>
+  <style>
+    :root { --primary:#2563eb; --text:#acacac; }
+    *{box-sizing:border-box}
+
+    /* ---------- Aspeto geral ----------------------------------------- */
+    body{
+      margin:0;
+      font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:url('Bi.jpeg') center/cover fixed no-repeat;
+      color:#fff;
+      line-height:1.6;
+      position:relative;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.45);
+      z-index:-1;
+    }
+
+    /* ---------- Topo -------------------------------------------------- */
+    header{
+      position:sticky;
+      top:0;
+      background:#ffffffcc;
+      backdrop-filter:blur(6px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:.75rem 1.25rem;
+      box-shadow:0 2px 8px rgba(0,0,0,.05);
+    }
+    .logo{ font-size:1.1rem; font-weight:600; color:#fff }
+    nav a{
+      margin-left:1rem;
+      text-decoration:none;
+      color:#fff;
+      font-size:.95rem;
+      transition:color .2s;
+    }
+    nav a:hover{ color:var(--primary) }
+
+    /* ---------- Bloco hero ------------------------------------------- */
+    .hero{
+      min-height:70vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:2rem 1rem 3rem;
+    }
+    .hero h1{ font-size:2.3rem; margin-bottom:.5rem }
+    .hero p{ max-width:640px; margin:0 auto 1.5rem; font-size:1.05rem }
+    a.btn{
+      display:inline-block;
+      padding:.75rem 1.8rem;
+      background:var(--primary);
+      color:#fff;
+      border-radius:.5rem;
+      text-decoration:none;
+      transition:opacity .2s;
+    }
+    a.btn:hover{ opacity:.9 }
+    a.btn.icon{
+      width:2.5rem; height:2.5rem;
+      padding:0;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    a.btn.icon svg{ width:1.2rem; height:1.2rem }
+
+    /* ---------- Secções ---------------------------------------------- */
+    section{ max-width:800px; margin:0 auto; padding:3rem 1.25rem }
+    section h2{
+      font-size:1.6rem;
+      margin-bottom:1rem;
+      color:#fff;
+      text-align:center;
+    }
+
+    /* ---------- Galeria ---------------------------------------------- */
+    .gallery-wrapper{
+      position:relative;
+      width:100%;
+      max-width:800px;
+      margin:0 auto;
+    }
+    .gallery{
+      display:flex;
+      overflow:hidden;
+      scroll-snap-type:x mandatory;
+      height:400px; /* altura do carrossel */
+    }
+    .gallery img{
+      flex:0 0 100%; /* um slide de cada vez */
+      height:100%;
+      object-fit:contain; /* mantém telemóveis na vertical */
+      border-radius:.75rem;
+      scroll-snap-align:start;
+    }
+    .gallery-btn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:2.4rem; height:2.4rem;
+      border:none;
+      border-radius:50%;
+      background:rgba(0,0,0,.45);
+      color:#fff;
+      font-size:1.3rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+    .gallery-btn:hover{ background:rgba(0,0,0,.65) }
+    .gallery-btn.prev{ left:-2.8rem }
+    .gallery-btn.next{ right:-2.8rem }
+
+    /* Legenda abaixo da galeria */
+    .gallery-caption{
+      text-align:center;
+      margin:.75rem 0;
+      color:#fff;
+      font-size:1rem;
+    }
+
+    /* ---------- Rodapé ---------------------------------------------- */
+    footer{
+      text-align:center;
+      font-size:.875rem;
+      padding:2rem 0 3rem;
+      color:#e5e7eb;
+    }
+
+    /* ---------- Responsivo base -------------------------------------- */
+    @media (max-width:640px){
+      nav a{ margin-left:.75rem }
+      .hero h1{ font-size:1.8rem }
+    }
+
+    /* ---------- Ajustes extra para tablet e telemóvel -------------- */
+    @media (max-width:768px) {
+      /* Header empilhado */
+      header{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:.75rem 1rem;
+      }
+      .logo{ font-size:1rem }
+      nav{
+        margin-top:.5rem;
+        flex-wrap:wrap;
+      }
+      nav a{
+        margin:.5rem .75rem .5rem 0;
+        font-size:.9rem;
+      }
+      /* Galeria adapta altura e imagens escalam */
+      .gallery{ height:50vh }
+      .gallery img{
+        width:100%;
+        height:auto;
+      }
+    }
+    @media (max-width:480px) {
+      header{ padding:.5rem 1rem }
+      .logo{ font-size:.9rem }
+      nav a{
+        margin:.4rem .5rem;
+        font-size:.8rem;
+      }
+      .gallery{ height:40vh }
+      .gallery img{
+        width:100%;
+        height:auto;
+      }
+      .gallery-caption{ font-size:.85rem }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">José Freitas - PowerBI</div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#empresa">WEGeuro</a>
+      <a href="#projeto">Projeto</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <!-- Início -->
+  <section id="inicio" class="hero">
+    <h1>PowerBI</h1>
+    <p>No âmbito da UC de Projeto de Engenharia Informática em Contexto Empresarial, realizei o meu estágio na <strong>WEGeuro S.A.</strong>, onde implementei indicadores globais da empresa através de um organograma interativo desenvolvido em Power&nbsp;BI.</p>
+    <a class="btn" href="relatorio_estagio.pdf" download>Download do Relatório</a>
+  </section>
+
+  <!-- Sobre a WEGeuro S.A. -->
+  <section id="empresa">
+    <h2>Sobre a WEGeuro S.A.</h2>
+    <p>A <strong>WEG</strong> é uma multinacional de origem brasileira, fundada em 1961 em Jaraguá do Sul (Santa Catarina). Começou pela produção de motores elétricos e, hoje, disponibiliza soluções integradas para automação industrial, mobilidade elétrica, energias renováveis, geração e distribuição de energia e eficiência energética. Presente em mais de 135&nbsp;países e com unidades industriais em 17 deles, a empresa conta com mais de 47&nbsp;000&nbsp;colaboradores e mantém um compromisso firme com inovação e sustentabilidade. Em Portugal, reforçou essa aposta com a inauguração, em outubro de 2024, de uma nova unidade fabril em Santo Tirso.</p>
+    <p>O <strong>Departamento Europeu de Tecnologias de Informação (TI&nbsp;Europe)</strong> assegura o desenvolvimento, a integração e o suporte dos sistemas digitais das filiais em toda a região e no continente europeu. A equipa garante governação tecnológica, gestão de incidentes, administração de infraestruturas e implementação de projetos estratégicos, promovendo a eficiência operacional da WEG e alinhando-se com a estratégia global da empresa.</p>
+    <p><a class="btn" href="https://www.weg.net" target="_blank" rel="noopener">Visitar site WEG</a></p>
+  </section>
+
+  <!-- Projeto -->
+  <section id="projeto">
+    <h2>Projeto</h2>
+    <p>Este projeto, desenvolvido no Departamento Europeu de Tecnologias de Informação da WEGeuro, S.A., surgiu da necessidade de substituir os organogramas estáticos sujeitos a atualização manual. Foi, assim, implementado um <strong>organograma interativo em Power&nbsp;BI</strong> que apresenta, em tempo real, a estrutura organizacional da WEG. A solução, totalmente responsiva, funciona em computadores e dispositivos móveis, integra pesquisa de departamentos e possibilita o contacto imediato com qualquer colaborador através de ligação direta a e-mail ou Microsoft&nbsp;Teams. O organograma distingue visualmente diretores, gerentes, chefes e colaboradores, facilitando a identificação de funções e secções. Ao substituir os diagramas manuais, eliminou tarefas de atualização, reduziu o tempo de procura de informação interna e reforçou a transparência e a comunicação dentro da organização, recorrendo a práticas avançadas de visualização de dados em Power&nbsp;BI e DAX.</p>
+  </section>
+
+  <!-- Galeria -->
+  <section id="galeria">
+    <div class="gallery-wrapper">
+      <button class="gallery-btn prev" onclick="scrollGallery(-1)">&#10094;</button>
+      <div class="gallery">
+        <img src="Imagem1.png" alt="" data-caption="Organograma — Vista inicial">
+        <img src="Imagem2.png" alt="" data-caption="Organograma — Expansão dos níveis">
+        <img src="Imagem3.png" alt="" data-caption="Organograma — Níveis intermédios com coordenadores">
+        <img src="Imagem4.png" alt="" data-caption="Organograma — Visão completa">
+        <img src="Imagem5.png" alt="" data-caption="Versão Móvel — Vista inicial">
+        <img src="Imagem6.png" alt="" data-caption="Versão Móvel — Navegação vertical (secções intermédias)">
+        <img src="Imagem7.png" alt="" data-caption="Versão Móvel — Detalhe de colaboradores com contactos rápidos">
+        <img src="Imagem8.png" alt="" data-caption="Versão Móvel — Secção expandida com funções e opções de contacto">
+      </div>
+      <button class="gallery-btn next" onclick="scrollGallery(1)">&#10095;</button>
+    </div>
+    <div id="gallery-caption" class="gallery-caption"></div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p><strong>José Manuel Freitas</strong><br>
+       Estudante do 3.º ano de Licenciatura em Engenharia Informática no Instituto Superior Politécnico de Gaya.<br>
+       Gosto de assumir desafios que envolvam pensamento crítico, trabalho em equipa e soluções criativas, com a ambição de me aperfeiçoar dia após dia.
+    </p>
+    <p>
+      <a class="btn icon" href="mailto:ispg2022101433@ispgya.pt" title="Enviar e-mail">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M2 4h20v16H2V4zm2 2v1.245l8 4.755 8-4.755V6H4zm16 12V9.755l-8 4.755-8-4-755V18h16z"/>
+        </svg>
+      </a>
+      <a class="btn icon" href="https://www.linkedin.com/in/jos%C3%A9-freitas-882a35272/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-332C24.94 116 0 91.06 0 60.81 0 30.09 24.94 4 54.14 4s54.14 26.09 54.14 56.81c0 30.25-24.94 55.19-54.14 55.19zM447.9 448h-92.68V302.4c0-34.7-.7-79.4-48.38-79.4-48.4 0-55.8 37.8-55.8 76.8V448h-92.6V148.9h88.98v40.8h1.3c12.4-23.5 42.6-48.3 87.7-48.3 93.8 0 111.1 61.8 111.1 142.3V448z"/>
+        </svg>
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 José Freitas. Todos os direitos reservados.</footer>
+
+  <!-- Script das setas da galeria e legendas ------------------------- -->
+  <script>
+    const gal = document.querySelector('#galeria .gallery');
+    const captionEl = document.getElementById('gallery-caption');
+    const captions = Array.from(gal.querySelectorAll('img')).map(img => img.dataset.caption);
+    function updateCaption() {
+      const idx = Math.round(gal.scrollLeft / gal.clientWidth);
+      captionEl.textContent = captions[idx] || '';
+    }
+    function scrollGallery(dir) {
+      gal.scrollBy({ left: dir * gal.clientWidth, behavior: 'smooth' });
+      setTimeout(updateCaption, 300);
+    }
+    window.addEventListener('load', updateCaption);
+    gal.addEventListener('scroll', () => {
+      clearTimeout(window._debCaption);
+      window._debCaption = setTimeout(updateCaption, 100);
+    });
+  </script>
+</body>
+</html>
