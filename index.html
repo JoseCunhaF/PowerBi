@@ -98,12 +98,14 @@
       max-width:800px;
       margin:0 auto;
     }
+    /* ---------- Galeria ---------------------------------------------- */
     .gallery{
       display:flex;
-      overflow:hidden;
+      overflow-x:hidden;            /* em vez de overflow:hidden */
       scroll-snap-type:x mandatory;
       height:400px; /* altura do carrossel */
     }
+
     .gallery img{
       flex:0 0 100%; /* um slide de cada vez */
       height:100%;
@@ -190,6 +192,16 @@
       }
       .gallery-caption{ font-size:.85rem }
     }
+
+    /* ─── Em tablets e telemóveis ─── */
+    @media (max-width:768px) {
+      .gallery-btn { display: none; }        /* esconde as setas */
+      .gallery {
+        overflow-x: auto;                    /* ativa o scroll por dedo */
+        -webkit-overflow-scrolling: touch;    /* torna o swipe mais fluido */
+      }
+    }
+
   </style>
 </head>
 <body>
