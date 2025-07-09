@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "PowerBI – José Freitas"
+  },
+  "header": {
+    "logo": "José Freitas - PowerBI"
+  },
+  "nav": {
+    "home": "Início",
+    "wegeuro": "WEGeuro",
+    "project": "Projeto",
+    "about": "Sobre"
+  },
+  "hero": {
+    "title": "PowerBI",
+    "desc": "No âmbito da UC de Projeto de Engenharia Informática em Contexto Empresarial, realizei o meu estágio na <strong>WEGeuro S.A.</strong>, onde implementei indicadores globais da empresa através de um organograma interativo desenvolvido em Power&nbsp;BI.",
+    "btn": "Download do Relatório"
+  },
+  "empresa": {
+    "title": "Sobre a WEGeuro S.A.",
+    "p1": "A <strong>WEG</strong> é uma multinacional de origem brasileira, fundada em 1961 em Jaraguá do Sul (Santa Catarina). Começou pela produção de motores elétricos e, hoje, disponibiliza soluções integradas para automação industrial, mobilidade elétrica, energias renováveis, geração e distribuição de energia e eficiência energética. Presente em mais de 135 países e com unidades industriais em 17 deles, a empresa conta com mais de 47 000 colaboradores e mantém um compromisso firme com inovação e sustentabilidade. Em Portugal, reforçou essa aposta com a inauguração, em outubro de 2024, de uma nova unidade fabril em Santo Tirso.",
+    "p2": "O <strong>Departamento Europeu de Tecnologias de Informação (TI Europe)</strong> assegura o desenvolvimento, a integração e o suporte dos sistemas digitais das filiais em toda a região e no continente europeu. A equipa garante governação tecnológica, gestão de incidentes, administração de infraestruturas e implementação de projetos estratégicos, promovendo a eficiência operacional da WEG e alinhando-se com a estratégia global da empresa.",
+    "btn": "Visitar site WEG"
+  },
+  "projeto": {
+    "title": "Projeto",
+    "desc": "Este projeto, desenvolvido no Departamento Europeu de Tecnologias de Informação da WEGeuro, S.A., surgiu da necessidade de substituir os organogramas estáticos sujeitos a atualização manual. Foi, assim, implementado um <strong>organograma interativo em Power BI</strong> que apresenta, em tempo real, a estrutura organizacional da WEG. A solução, totalmente responsiva, funciona em computadores e dispositivos móveis, integra pesquisa de departamentos e possibilita o contacto imediato com qualquer colaborador através de ligação direta a e-mail ou Microsoft Teams. O organograma distingue visualmente diretores, gerentes, chefes e colaboradores, facilitando a identificação de funções e secções. Ao substituir os diagramas manuais, eliminou tarefas de atualização, reduziu o tempo de procura de informação interna e reforçou a transparência e a comunicação dentro da organização, recorrendo a práticas avançadas de visualização de dados em Power BI e DAX."
+  },
+  "gallery": {
+    "captions": [
+      "Organograma — Vista inicial",
+      "Organograma — Expansão dos níveis",
+      "Organograma — Níveis intermédios com coordenadores",
+      "Organograma — Visão completa",
+      "Versão Móvel — Vista inicial",
+      "Versão Móvel — Navegação vertical (secções intermédias)",
+      "Versão Móvel — Detalhe de colaboradores com contactos rápidos",
+      "Versão Móvel — Secção expandida com funções e opções de contacto"
+    ]
+  },
+  "sobre": {
+    "title": "Sobre",
+    "p": "<strong>José Manuel Freitas</strong><br>Estudante do 3.º ano de Licenciatura em Engenharia Informática no Instituto Superior Politécnico de Gaya.<br>Gosto de assumir desafios que envolvam pensamento crítico, trabalho em equipa e soluções criativas, com a ambição de me aperfeiçoar dia após dia.",
+    "email_title": "Enviar e-mail",
+    "linkedin_title": "LinkedIn"
+  },
+  "footer": "© 2025 José Freitas. Todos os direitos reservados."
+}

@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "PowerBI – José Freitas"
+  },
+  "header": {
+    "logo": "José Freitas - PowerBI"
+  },
+  "nav": {
+    "home": "Home",
+    "wegeuro": "WEGeuro",
+    "project": "Project",
+    "about": "About"
+  },
+  "hero": {
+    "title": "PowerBI",
+    "desc": "As part of the Computer Engineering Project course in a Business Context, I completed my internship at <strong>WEGeuro S.A.</strong>, where I implemented global company indicators through an interactive org chart developed in Power BI.",
+    "btn": "Download Report"
+  },
+  "empresa": {
+    "title": "About WEGeuro S.A.",
+    "p1": "WEG is a Brazilian multinational founded in 1961 in Jaraguá do Sul (Santa Catarina). It began by manufacturing electric motors and today provides integrated solutions for industrial automation, electric mobility, renewable energy, power generation and distribution, and energy efficiency. Present in over 135 countries with industrial units in 17 of them, the company has more than 47,000 employees and maintains a strong commitment to innovation and sustainability. In Portugal, it reinforced this commitment with the inauguration in October 2024 of a new manufacturing plant in Santo Tirso.",
+    "p2": "The European Information Technology Department (IT Europe) ensures the development, integration and support of digital systems for subsidiaries across the region and the European continent. The team provides technology governance, incident management, infrastructure administration and the implementation of strategic projects, promoting WEG’s operational efficiency and aligning with the company’s global strategy.",
+    "btn": "Visit WEG website"
+  },
+  "projeto": {
+    "title": "Project",
+    "desc": "This project, developed in the European Information Technology Department at WEGeuro S.A., arose from the need to replace static org charts that were manually updated. Thus, an <strong>interactive org chart in Power BI</strong> was implemented, presenting WEG’s organizational structure in real time. The fully responsive solution works on both desktop and mobile devices, integrates department search functionality, and allows immediate contact with any employee via direct email or Microsoft Teams link. The org chart visually distinguishes directors, managers, supervisors and employees, facilitating the identification of roles and sections. By replacing manual diagrams, it eliminated update tasks, reduced the time spent searching for internal information and reinforced transparency and communication within the organization, leveraging advanced data visualization practices in Power BI and DAX."
+  },
+  "gallery": {
+    "captions": [
+      "Org Chart — Initial view",
+      "Org Chart — Level expansion",
+      "Org Chart — Mid-levels with coordinators",
+      "Org Chart — Full view",
+      "Mobile Version — Initial view",
+      "Mobile Version — Vertical navigation (mid sections)",
+      "Mobile Version — Employee detail with quick contacts",
+      "Mobile Version — Expanded section with roles and contact options"
+    ]
+  },
+  "sobre": {
+    "title": "About",
+    "p": "<strong>José Manuel Freitas</strong><br>3rd-year Computer Engineering student at Instituto Superior Politécnico de Gaya.<br>I enjoy taking on challenges that involve critical thinking, teamwork and creative solutions, with the ambition to improve day by day.",
+    "email_title": "Send email",
+    "linkedin_title": "LinkedIn"
+  },
+  "footer": "© 2025 José Freitas. All rights reserved."
+}
